@@ -7,12 +7,24 @@
 
     <!-- Estrutura Blaze que chama o conteudo do template -->
     {{> leaderboard}}
+    {{> outro}}
 </body>
 
 <template name="leaderboard">
     <ul>
         {{#each player}}
-        <li>{{name}}: {{score}}</li>
+        <li class="player {{classeSelecionado}}">{{name}}: {{score}}</li>
         {{/each}}
+    </ul>
+
+    <input type="button" class="increment" value="Give 5 points">
+    <input type="button" class="decrement" value="Decrease 5 points">
+
+    
+</template>
+
+<template name="outro">
+    <ul>
+        outro
     </ul>
 </template>
